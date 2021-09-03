@@ -1,0 +1,8 @@
+const app = require('./src/app')
+const http = require('http');
+
+const port = process.env.PORT || '4321';
+app.set('port', port);
+
+const server = http.createServer(app);
+server.listen(port, () => console.log(`[OK COMPUTER] Running at port ${port}!`));
